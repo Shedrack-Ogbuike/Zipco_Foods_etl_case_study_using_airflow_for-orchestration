@@ -8,7 +8,7 @@ def run_transformation():
     """
     try:
         # Load the data
-        data = pd.read_csv('zipco_transaction.csv')
+        data = pd.read_csv('/home/wonder1844/airflow/zipco_food_dag/zipco_transaction.csv')
         print("Data Extracted Successfully.")
         
         # data cleaning and transformation
@@ -55,11 +55,11 @@ def run_transformation():
                            'DeliveryTime_min','OrderType', 'DayOfWeek','TotalSales']] 
         
         # Save the cleaned data to CSV files
-        data.to_csv('cleaned_data.csv', index=False)
-        products.to_csv('products.csv', index=False)
-        customers.to_csv('customers.csv', index=False)
-        staff.to_csv('staff.csv', index=False)
-        transactions.to_csv('transactions.csv', index=False)                                                                                                                  
+        data.to_csv('/home/wonder1844/airflow/zipco_food_dag/cleaned_data.csv', index=False)
+        products.to_csv('/home/wonder1844/airflow/zipco_food_dag/products.csv', index=False)
+        customers.to_csv('/home/wonder1844/airflow/zipco_food_dag/customers.csv', index=False)
+        staff.to_csv('/home/wonder1844/airflow/zipco_food_dag/staff.csv', index=False)
+        transactions.to_csv('/home/wonder1844/airflow/zipco_food_dag/transactions.csv', index=False)                                                                                                                  
         
         print("Data  cleaning and Transformation Completed Successfully.")
     except Exception as e:
